@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/casiomiprimeracalculadorahexadecimal"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/srcjorge"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pantalla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/pantalla"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/white"
+        android:text="@string/_0"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/pantallaSigno"
+        android:layout_width="77dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/white"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1B2631"
+        android:gravity="center"
+
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla"
+        tools:background="#1B2631  ">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="Dec"
+                android:text="DEC"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones2"
+                android:onClick="numero"
+                android:text="C"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones2"
+                android:onClick="numero"
+                android:text="D"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones2"
+                android:onClick="numero"
+                android:text="E"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones2"
+                android:onClick="numero"
+                android:text="F"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp"
+                tools:textColor="@android:color/holo_red_dark" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="divideHex"
+                android:text="@string/divide"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonMC"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="memoriaClHex"
+                android:text="@string/mc"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="8"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="@string/_9"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones2"
+                android:onClick="numero"
+                android:text="A"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones2"
+                android:onClick="numero"
+                android:text="B"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="multiplicaHex"
+                android:text="@string/x"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonMR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="memoriaRetHex"
+                android:text="@string/mr"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="4"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="6"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonResta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="restaHex"
+                android:text="@string/menos"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonMmas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="memoriaMasHex"
+                android:text="@string/m"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="cero"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonPunto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonSigno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones1"
+                android:onClick="numero"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonSuma"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botones"
+                android:onClick="sumaHex"
+                android:text="@string/mas"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonIgual"
+                android:layout_width="535dp"
+                android:layout_height="match_parent"
+                android:layout_span="5"
+                android:background="@drawable/botones"
+                android:onClick="calculaHex"
+                android:text="@string/igual"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonBorra"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="1"
+                android:background="@drawable/botones"
+                android:onClick="ce"
+                android:text="@string/ce"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="25sp" />
+
+        </TableRow>
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
